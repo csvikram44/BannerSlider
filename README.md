@@ -1,4 +1,4 @@
-# Mage2 Module Magento360 BannerSlider
+# Magento 2 Module - Banner Slider Widget
 
     ``magento360/module-bannerslider``
 
@@ -43,7 +43,7 @@ Home main banner slider
 ## Specifications
 
  - Widget
-	- BannerInfo
+	- Home Banner Slider
 
 
 ## Attributes
