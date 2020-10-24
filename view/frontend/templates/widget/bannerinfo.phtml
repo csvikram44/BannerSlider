@@ -1,0 +1,17 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$filterProvider = $objectManager->create('\Magento\Cms\Model\Template\FilterProvider');
+$storeManager = $objectManager->create('\Magento\Store\Model\StoreManagerInterface');
+
+echo $filterProvider->getBlockFilter()
+    ->setStoreId($storeManager->getStore()->getId())
+    ->filter($block->getData('banner_content'));
+?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "bannerslider": {}
+        }
+    }
+</script>

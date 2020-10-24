@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget class="Magento360\BannerSlider\Block\Widget\BannerInfo" id="magento360_bannerslider_bannerinfo">
+		<label>Home Banner Slider</label>
+		<description>Home page banner slider</description>
+		<parameters>
+			<parameter name="slider_id" sort_order="10" source_model="Magento\Config\Model\Config\Source\Yesno" visible="true" xsi:type="select">
+				<label>Enable Module</label>
+			</parameter>
+			<parameter name="banner_content" sort_order="20" visible="true" xsi:type="block">
+				<label>Content</label>
+                <block class="Magento360\BannerSlider\Block\Widget\Editor" />
+			</parameter>
+		</parameters>
+	</widget>
+</widgets>

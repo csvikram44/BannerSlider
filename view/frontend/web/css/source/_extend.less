@@ -1,0 +1,104 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .banner-content {
+        user-select: text;
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        right: 30px;
+        transform: translateY(-50%);
+        color: #ffffff;
+        background: rgba(225, 225, 225, 0.7);
+        padding: 20px;
+        max-width: 500px;
+        h1 {
+            color: #333;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        p {
+            margin: 5px 0 10px;
+            color: #333;
+            font-size: 14px;
+        }
+        .action.primary {
+            background: #00859d;
+            border-color: #00859d;
+            border-radius: 0;
+            font-weight: normal;
+            letter-spacing: 1.2px;
+            &:hover {
+                background: #3e899f;
+                border-color: #3e899f;
+            }
+        }
+    }
+
+    .banner-slider {
+        margin-bottom: 50px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .banner-content {
+        left: 15px;
+        right: 15px;
+        padding: 30px;
+        h1 {
+            font-size: 24px;
+        }
+        .action.primary {
+            font-size: 14px;
+        }
+    }
+
+    .banner-item {
+        img {
+            height: 270px;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+    }
+
+    .banner-slider {
+        margin-bottom: 20px;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .banner-content {
+        left: 100px;
+        padding: 30px;
+        h1 {
+            font-size: 44px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+//
+//  Desktop above 1440px
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .banner-content {
+        left: 20%;
+    }
+}
